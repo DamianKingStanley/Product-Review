@@ -1,0 +1,168 @@
+/* TopHeader.css */
+
+.TopHeader {
+    width: 100%;
+    background-color: #ffff;
+    border-bottom: 1px solid #dee2e6;
+    padding: 10px 0;
+}
+
+.TopHeaderContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.TopHeaderOne h1 {
+    font-size: 24px;
+    color: purple;
+    margin: 0;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.TopHeaderOne a {
+    text-decoration: none;
+}
+
+.TopHeaderTwo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.TopHeaderTwo div {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.TopHeaderTwo input[type="search"] {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid purple;
+    border-radius: 20px;
+    outline: none;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.TopHeaderTwo svg {
+    color: purple;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.TopHeaderThree {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.TopHeaderThree #hotline {
+    display: flex;
+    align-items: center;
+}
+
+.TopHeaderThree #hotline div:first-child {
+    margin-right: 10px;
+    font-size: 20px;
+    color: #007bff;
+}
+
+.TopHeaderThree #hotline p {
+    margin: 0;
+    font-size: 14px;
+    color: #495057;
+}
+
+.TopHeaderThree svg {
+    font-size: 20px;
+    color: purple;
+    cursor: pointer;
+}
+
+.TopHeaderThree .userImage {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.TopHeaderThree .profilePictureNav {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.TopHeaderThree .profileIconNav {
+    font-size: 30px;
+    color: #495057;
+}
+
+#loginBtn {
+    padding: 8px 16px;
+    background-color: purple;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#loginBtn:hover {
+    background-color: rgb(225, 14, 225);
+}
+
+.TopHeader .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.TopHeader .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.TopHeader .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.userPart {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.loggedInUser {
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 980px) {
+    .TopHeaderOne a h1 {
+        text-decoration: none;
+        font-size: 16px;
+    }
+    .TopHeaderThree svg {
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .TopHeaderThree #hotline p {
+        margin: 0;
+        font-size: 14px;
+    }
+    .userPart {
+        display: none;
+    }
+    .TopHeaderTwo {
+        display: none;
+    }
+}

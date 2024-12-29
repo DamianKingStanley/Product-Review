@@ -1,0 +1,95 @@
+.Navibar {
+  display: none;
+}
+
+@media (max-width: 980px) {
+  .Navibar {
+    padding: 10px 20px;
+    width: 100%;
+    display: contents;
+  }
+  .NavibarContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .MobileIcon {
+    background-color: purple;
+    color: #ecf0f1;
+    display: block;
+    font-size: 15px;
+    cursor: pointer;
+    z-index: 1000;
+    padding: 10px;
+  }
+  .NaviItems {
+    display: none;
+    flex-direction: column;
+    background-color: purple;
+    color: #ecf0f1;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 20px;
+    z-index: 999;
+  }
+  .NaviItems.NavItemsMobile {
+    display: flex;
+  }
+  .NaviItems li {
+    margin: 10px 0;
+    color: white;
+    font-size: 15px;
+    list-style-type: none;
+    background-color: rgb(70, 2, 70);
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .NaviDropdownMenu {
+    position: relative;
+    top: 20px;
+    width: 100%;
+    padding-left: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    z-index: 100;
+    list-style: none;
+  }
+  .NaviDropdownMenu li {
+    font-size: 13px;
+  }
+  .NaviDropdownMenu.show {
+    display: block;
+  }
+  .NaviDropdownMenu {
+    display: none;
+  }
+  .NaviDropdownMenu li a {
+    text-decoration: none;
+    color: #ecf0f1;
+    display: block;
+    padding: 5px 10px;
+  }
+  .userfullname {
+    display: flex;
+    align-items: center;
+  }
+  .userInfo {
+    display: flex;
+    align-items: center;
+  }
+  .profileIconNav {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+    color: white;
+    /* Adjust as needed */
+  }
+  .username {
+    color: white;
+    /* Adjust as needed */
+    margin-right: 1rem;
+  }
+}

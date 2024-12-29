@@ -1,0 +1,118 @@
+/* MissionVision.css */
+
+.missionVisionContainer {
+  background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+  box-sizing: border-box;
+  text-align: center;
+  padding: 30px 0px;
+}
+
+.missionVisionContent {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 50px 80px;
+}
+
+.missionSection,
+.visionSection,
+.warningSection {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards;
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.missionSection:hover,
+.visionSection:hover,
+.warningSection:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  background: #e9e9e9;
+}
+
+.missionSection {
+  animation-delay: 0.5s;
+}
+
+.visionSection {
+  animation-delay: 1s;
+}
+
+.warningSection {
+  animation-delay: 1.5s;
+}
+
+.missionVisionContainer .icon {
+  font-size: 2rem;
+  color: #6e45e2;
+  margin-bottom: 1rem;
+}
+
+.missionVisionContainer .text {
+  margin-bottom: 2rem;
+}
+
+.missionVisionContainer h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+.missionVisionContainer p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.getStartedButton {
+  margin-top: 2rem;
+  padding: 0.75rem 2rem;
+  font-size: 1.2rem;
+  color: #fff;
+  background: linear-gradient(135deg, #6e45e2, #88d3ce);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  transform: perspective(1px) translateZ(0);
+  outline: none;
+  width: 300px;
+}
+
+.getStartedButton:hover {
+  background: linear-gradient(135deg, #88d3ce, #6e45e2);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.getStartedButton:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation for fade-in effect */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .missionVisionContent {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 50px 30px;
+  }
+}

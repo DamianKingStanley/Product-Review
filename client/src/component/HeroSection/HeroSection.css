@@ -1,0 +1,81 @@
+.HeroSectionBody {
+  background-color: purple;
+}
+
+.testimoniesSection {
+  width: 100%;
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.slick-slider {
+  position: relative;
+}
+
+.testimony {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.testimony img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonyText {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 24px;
+  max-width: 80%;
+  font-style: italic;
+  z-index: 10;
+}
+
+.testimonyName {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 18px;
+  z-index: 10;
+}
+
+@media screen and (max-width: 980px) {
+  .testimoniesSection {
+    max-width: 100%;
+    padding: 10px 0;
+  }
+  .testimonyText {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    width: 100%;
+    font-style: italic;
+    z-index: 10;
+  }
+  .testimony {
+    position: relative;
+    height: 60vh;
+    overflow: hidden;
+  }
+}

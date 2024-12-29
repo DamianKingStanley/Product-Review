@@ -1,0 +1,191 @@
+/* Body styling */
+
+.SignInbody {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f5;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Loader Animation */
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #6c5ce7;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 1.5s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Register Form */
+
+.SignInbody .register {
+  background: linear-gradient(145deg, #ffffff, #e4e4e7);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 450px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Form Fields */
+
+.SignInbody input[type="text"],
+.SignInbody input[type="email"],
+.SignInbody input[type="password"],
+.SignInbody select {
+  width: 100%;
+  padding: 12px;
+  margin: 15px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.SignInbody input[type="text"]:focus,
+.SignInbody input[type="email"]:focus,
+.SignInbody input[type="password"]:focus,
+.SignInbody select:focus {
+  outline: none;
+  border-color: #6c5ce7;
+  box-shadow: 0 0 8px rgba(108, 92, 231, 0.3);
+}
+
+/* Submit Button */
+
+.SignInbody button#submitbtn {
+  width: 100%;
+  padding: 14px;
+  background-color: #6c5ce7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.SignInbody button#submitbtn:hover {
+  background-color: #5b42d1;
+}
+
+.success-message,
+.error-message {
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 100%;
+  color: #fff;
+}
+
+.success-message {
+  background-color: #2ecc71;
+}
+
+.error-message {
+  background-color: #e74c3c;
+}
+
+.SignInbody .password-toggle1 {
+  position: absolute;
+  right: 47px;
+  top: 64%;
+  cursor: pointer;
+  color: #6c5ce7;
+  transition: color 0.3s ease;
+}
+
+.SignInbody .password-toggle1:hover,
+.SignInbody .password-toggle:hover {
+  color: #5b42d1;
+}
+
+/* Password Mismatch Alert */
+
+#passwordmatchAlert p {
+  color: red;
+  font-size: 14px;
+}
+
+/* Already registered Link */
+
+#already {
+  font-size: 14px;
+}
+
+#already a {
+  color: #6c5ce7;
+  text-decoration: none;
+}
+
+#already a:hover {
+  text-decoration: underline;
+}
+
+/* Animated UL */
+
+.register ul {
+  position: absolute;
+  top: -30px;
+  left: -40px;
+  width: 120%;
+  height: 150px;
+  background-color: #6c5ce7;
+  border-radius: 50%;
+  z-index: 1;
+  animation: float 4s ease-in-out infinite;
+  transition: transform 0.5s ease;
+}
+
+.register ul:before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: -80px;
+  width: 150px;
+  height: 150px;
+  background-color: #6c5ce7;
+  border-radius: 50%;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.register h1,
+.register p {
+  z-index: 2;
+  position: relative;
+  color: #6c5ce7;
+}
+
+#role {
+  display: none;
+}

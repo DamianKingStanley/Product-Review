@@ -1,0 +1,139 @@
+.cartBody {
+  padding: 20px 50px;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cartBody h1 {
+  text-align: center;
+  color: #1d9d21;
+}
+
+.cart-item {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+.cart-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.cart-item div {
+  flex-grow: 1;
+}
+
+.cart-item h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.cart-item p {
+  margin: 5px 0;
+}
+
+.cart-total {
+  margin-top: 20px;
+  font-size: 24px;
+}
+
+.cart-actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.cart-actions button {
+  padding: 10px 20px;
+  background-color: #1d9d21;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.cart-actions button:hover {
+  background-color: #034405;
+}
+
+#removebtn {
+  padding: 10px 20px;
+  background-color: rgb(166, 0, 0);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.CartComponentmodal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 5px;
+  z-index: 1000;
+  color: white;
+}
+
+.CartComponentmodal-content {
+  text-align: center;
+}
+
+.CartComponentmodal-content h3 {
+  margin-bottom: 20px;
+}
+
+.CartComponentmodal-content button {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #1d9d21;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.CartComponentmodal-content button:hover {
+  background-color: #014b03;
+}
+
+#cancelpaymentbtn {
+  padding: 10px 20px;
+  background-color: rgb(166, 0, 0);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#cancelpaymentbtn:hover {
+  background-color: rgrgb(230, 35, 35);
+}
+
+@media screen and (max-width: 980px) {
+  .cartBody {
+    padding: 20px 10px;
+  }
+  .cart-actions button {
+    padding: 10px 10px;
+  }
+  .CartComponentmodal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 1000;
+    color: white;
+    width: 200px;
+  }
+}

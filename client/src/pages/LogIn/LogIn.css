@@ -1,0 +1,184 @@
+/* General body style */
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+}
+
+.LoginBody {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #6a0dad 0%, #f3f3f3 100%);
+  position: relative;
+  /* Ensure its position is clear and doesn't affect loader */
+  z-index: 1;
+}
+
+.LoginBody form {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.LoginBody form h1 {
+  text-align: center;
+  color: #6a0dad;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+.LoginBody form input[type="password"],
+.LoginBody form input[type="email"],
+.LoginBody form select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #6a0dad;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #333;
+  transition: border 0.3s ease;
+}
+
+.LoginBody form input[type="text"]:focus,
+.LoginBody form input[type="password"]:focus,
+.LoginBody form select:focus {
+  border-color: #8e44ad;
+  outline: none;
+}
+
+.LoginBody form .pswd-container {
+  position: relative;
+}
+
+.LoginBody form .pswd-toggle-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #6a0dad;
+}
+
+.LoginBody form .pswd-toggle-icon:hover {
+  color: #8e44ad;
+}
+
+/* Role selection styling */
+
+.normal-role {
+  font-size: 1rem;
+  color: #6a0dad;
+  display: none;
+}
+
+/* Submit button */
+
+.LoginBody form #submitLoginbtn {
+  background-color: #6a0dad;
+  color: white;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  padding: 12px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.LoginBody form #submitLoginbtn:disabled {
+  background-color: #9b59b6;
+  cursor: not-allowed;
+}
+
+.LoginBody form #submitLoginbtn:hover:not(:disabled) {
+  background-color: #8e44ad;
+  transform: translateY(-3px);
+}
+
+/* Link to register */
+
+.toRegister p {
+  text-align: center;
+  color: #6a0dad;
+  margin-top: 15px;
+}
+
+.toRegister a {
+  color: #8e44ad;
+  text-decoration: none;
+}
+
+.toRegister a:hover {
+  text-decoration: underline;
+}
+
+.error-message {
+  background-color: #ffdddd;
+  color: #e74c3c;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Loader container to cover the entire screen */
+
+.loader-container {
+  position: fixed;
+  /* Make it fixed to the viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Semi-transparent background */
+  z-index: 1000;
+  /* Make sure it's on top of everything */
+  pointer-events: none;
+  /* Prevent any interactions during loading */
+}
+
+/* Loader animation */
+
+.loader {
+  border: 4px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 4px solid #6a0dad;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+/* Spinner animation */
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
